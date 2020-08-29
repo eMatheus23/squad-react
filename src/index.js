@@ -6,6 +6,7 @@ import './css/sobre.css';
 //Componentes
 import Menu from './componentes/Sobre-menu';
 import SobreEquipe from './componentes/Sobre-equipe';
+import SobreProjeto from './componentes/Sobre-projeto';
 import {
     BrowserRouter as Router,
     Switch,
@@ -19,8 +20,9 @@ ReactDOM.render(
             <Route exact={true} path='/'>
                 <Menu home={false} sobre={true} login={true} />
             </Route>
-            <Route path='/Sobre'>
+              <Route path='/Sobre'>
               <Menu home={true} sobre={false} login={true} />
+              <SobreProjeto />
               <SobreEquipe />
             </Route>
             <Route path='/Login'>
