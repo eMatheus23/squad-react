@@ -4,7 +4,8 @@ import './css/menu-rodape.css';
 import './css/sobre.css';
 
 //Componentes
-import Menu from './componentes/Sobre-menu';
+import Menu from './componentes/Menu';
+import Rodape from './componentes/Rodape';
 import SobreEquipe from './componentes/Sobre-equipe';
 import {
     BrowserRouter as Router,
@@ -22,6 +23,7 @@ ReactDOM.render(
             <Route path='/Sobre'>
               <Menu home={true} sobre={false} login={true} />
               <SobreEquipe />
+			  <Rodape />
             </Route>
             <Route path='/Login'>
               <Menu home={true} sobre={true} login={false} />
