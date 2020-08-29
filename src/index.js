@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './css/menu-rodape.css';
 import './css/sobre.css';
 
-import Menu from './componentes/Sobre-menu'
+//Componentes
+import Menu from './componentes/Sobre-menu';
+import SobreEquipe from './componentes/Sobre-equipe';
 import {
     BrowserRouter as Router,
     Switch,
     Route
-} from 'react-router-dom'
+} from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,6 +21,7 @@ ReactDOM.render(
             </Route>
             <Route path='/Sobre'>
               <Menu home={true} sobre={false} login={true} />
+              <SobreEquipe />
             </Route>
             <Route path='/Login'>
               <Menu home={true} sobre={true} login={false} />

@@ -123,7 +123,7 @@ body {
 /* Ajuste de responsividade */
 @media only screen and (min-width: 1200px) {
     .sobre-equipe {
-        margin: 0 9vw 7vw;
+        margin: 0 0 7.5vw;
     }
 }
 /* Título */
@@ -142,7 +142,7 @@ body {
         /* Fonte */
         font-size: 2.8vw;
         /* Margem */
-        margin: 0 2vw 5.5vw;
+        margin: 0 10.8vw 5.5vw;
     }
 }
 /* Lista de membros */
@@ -150,14 +150,8 @@ body {
 
     /* Disposição */
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
-}
-/* Disposição - Ajuste de responsividade */
-@media only screen and (min-width: 1200px) {
-    .sobre-equipe__membros {
-        justify-content: center;
-    }
 }
 
 

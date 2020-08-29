@@ -7,7 +7,7 @@ import homeIcon from '../svg/icon-home.svg';
 import loginIcon from '../svg/icon-user-alt.svg';
 import sobreIcon from '../svg/icon-info-circle.svg';
 
- export default class Menu extends React.Component {
+export default class Menu extends React.Component {
     render() {
         return (
             <div className="container">
@@ -31,7 +31,7 @@ import sobreIcon from '../svg/icon-info-circle.svg';
                     <Link className="login" to="/Login">
                         <img src={loginIcon} alt="Login" />
                             login
-                    </Link> : null}               
+                    </Link> : null}             
                 </div>      
             </div>
         );
