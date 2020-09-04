@@ -1,7 +1,7 @@
 import React from 'react';
 
 //componets
-import ImagensPostadas from './imagens-postadas';
+import ImagensPostadas from './Imagens-postadas';
 
 //imagens
 import PrmeiraImagen from '../imagens/top10/photo-01.jpg';
@@ -21,7 +21,7 @@ export default class GaleriaImagens extends React.Component {
     render() {
         return (
             //Container que segura todas as divs de imagens relacionadas na pesquisadas 
-            <div id="imagens" class="containerGaleria">
+            <div id="imagens" className="containerGaleria">
                 <div className="coluna">
                     <ImagensPostadas
                     foto={PrmeiraImagen}
@@ -48,7 +48,8 @@ export default class GaleriaImagens extends React.Component {
                     textoPostadoPor="Postado por:"
                     textoTwitterUse="@twitterusername"
                />
-            <div className="coluna" id="coluna2"></div>
+               </div>
+            <div className="coluna" id="coluna2">
                      <ImagensPostadas
                     foto={SextaImagen}
                     textoPostadoPor="Postado por:"

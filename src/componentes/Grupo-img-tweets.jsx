@@ -1,8 +1,8 @@
 import React from 'react';
 
 //Componentes
-import GaleriaImagens from './galeria-img';
-import GaleriaTweets from './galeria-tweets';
+import GaleriaImagens from './Galeria-img';
+import GaleriaTweets from './Galeria-tweets';
 
 export default class GrupoImgTweets extends React.Component {
     render() {

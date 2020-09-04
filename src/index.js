@@ -10,7 +10,8 @@ import Menu from './componentes/Menu';
 import Rodape from './componentes/Rodape';
 import SobreEquipe from './componentes/Sobre-equipe';
 import SobreProjeto from './componentes/Sobre-projeto';
-import GrupoImgTweets from './componentes/grupo-img-tweets';
+import GrupoImgTweets from './componentes/Grupo-img-tweets';
+
 
 import {
     BrowserRouter as Router,
