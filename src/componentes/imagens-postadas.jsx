@@ -1,17 +1,15 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 
-//import Imagens
 
-import imagens from '../imagens/';
-
-export default class Imagens extends React.Component {
+export default class ImagensPostadas extends React.Component {
 
     render() {
         return (
             <div className="containerImagem">                
             <a target="_blank">
                 <img 
-                 src={this.props.imagem}
+                 src={this.props.imagens}
                  alt="foto Postada"
                  onclick="cliqueModal(this)"/>
                 <div className="degrade"></div>
@@ -23,6 +21,6 @@ export default class Imagens extends React.Component {
                 </div>
             </a>
         </div>
-        )
+        );
     }
 }

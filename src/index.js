@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/menu-rodape.css';
 import './css/sobre.css';
+import './css/imagens.css';
+import './css/imagensMobile.css';
 
 //Componentes
 import Menu from './componentes/Menu';
 import Rodape from './componentes/Rodape';
 import SobreEquipe from './componentes/Sobre-equipe';
 import SobreProjeto from './componentes/Sobre-projeto';
+import GrupoImgTweets from './componentes/grupo-img-tweets';
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -20,11 +24,13 @@ ReactDOM.render(
         <Switch>
             <Route exact={true} path='/'>
                 <Menu home={false} sobre={true} login={true} />
+                <GrupoImgTweets />
             </Route>
               <Route path='/Sobre'>
               <Menu home={true} sobre={false} login={true} />
               <SobreProjeto />
               <SobreEquipe />
+              
 			  <Rodape />
             </Route>
             <Route path='/Login'>
