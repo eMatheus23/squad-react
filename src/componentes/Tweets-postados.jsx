@@ -11,7 +11,7 @@ export default class TweetsPostados extends React.Component {
             <div className="twitterUserName">{this.props.twitterUserName}</div>
           </div>
           <div className="textoTweet">{this.props.textoTweet}</div>
-          <a href={this.props.link} target="_blank" className="linkTwitter">
+          <a href={this.props.link} target="_blank" rel="noopener noreferrer" className="linkTwitter">
             {this.props.verMais}
           </a>
         </div>

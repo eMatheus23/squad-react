@@ -25,7 +25,7 @@ export default class SobreProjeto extends React.Component {
                     </p>
                 </main>                
                 <img className='sobre-projeto__imagem'
-                src={ilustração}>                                       
+                src={ilustração} alt="Ilustração" >                                       
                 </img>
             </div>
               
