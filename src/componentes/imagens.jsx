@@ -2,7 +2,7 @@ import React from 'react';
 
 //import Imagens
 
-import Imagens from '../imagens/top10';
+import imagens from '../imagens/';
 
 export default class Imagens extends React.Component {
 
