@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/menu-rodape.css';
-import './css/sobre.css';
 import './css/imagens.css';
 import './css/imagensMobile.css';
+import './css/sobre.css';
 
 //Componentes
 import Menu from './componentes/Menu';

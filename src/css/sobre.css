@@ -210,7 +210,8 @@ body {
     /* Fonte */
     color: #72EFDB;
     font-size: 28px;
-
+    width: auto;
+    font-weight: 700;
     /* Margem */
     margin: 0 .75vw 22px;
 }
