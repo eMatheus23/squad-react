@@ -4,15 +4,15 @@ import React from 'react';
 import SobreMembro from './Sobre-membro';
 
 //Imagens
-import fotoCesar from '../imagens/fotos-perfis/cesar.jpg';
-import fotoElias from '../imagens/fotos-perfis/elias.jpg';
-import fotoErick from '../imagens/fotos-perfis/erick.jpg';
-import fotoGeice from '../imagens/fotos-perfis/geice.jpg';
-import fotoJordana from '../imagens/fotos-perfis/jordana.jpg';
-import fotoJulio from '../imagens/fotos-perfis/julio.jpg';
-import fotoLeonardo from '../imagens/fotos-perfis/leonardo.png';
-import fotoMiguel from '../imagens/fotos-perfis/miguel.jpg';
-import fotoYan from '../imagens/fotos-perfis/yan.jpg';
+import fotoCesar from '../../imagens/fotos-perfis/cesar.jpg';
+import fotoElias from '../../imagens/fotos-perfis/elias.jpg';
+import fotoErick from '../../imagens/fotos-perfis/erick.jpg';
+import fotoGeice from '../../imagens/fotos-perfis/geice.jpg';
+import fotoJordana from '../../imagens/fotos-perfis/jordana.jpg';
+import fotoJulio from '../../imagens/fotos-perfis/julio.jpg';
+import fotoLeonardo from '../../imagens/fotos-perfis/leonardo.png';
+import fotoMiguel from '../../imagens/fotos-perfis/miguel.jpg';
+import fotoYan from '../../imagens/fotos-perfis/yan.jpg';
 
 
 export default class SobreEquipe extends React.Component {

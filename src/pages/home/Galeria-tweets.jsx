@@ -1,6 +1,6 @@
 import React from "react";
 
-import TweetsPostados from "../pages/home/Tweets-postados";
+import TweetsPostados from "./Tweets-postados";
 
 //fotos do Perfil
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Import ilustração
-import ilustração from '../svg/about-ilustration.svg';
+import ilustração from '../../svg/about-ilustration.svg';
 // Adequação Reacts
 export default class SobreProjeto extends React.Component {
     render() {
