@@ -1,11 +1,11 @@
 import React from 'react';
 import './sobre.css';
-import '../em-comum/menu-rodape.css';
+import '../em-comum/estilo.css';
 
 import Menu from '../em-comum/Menu';
 import SobreProjeto from './Sobre-projeto';
 import SobreEquipe from './Sobre-equipe';
-import Rodape from '../em-comum/Rodape';
+import Footer from '../em-comum/Footer';
 
 
 // Adequação Reacts
@@ -13,10 +13,10 @@ class Sobre extends React.Component {
     render() {
         return (
             <div>
-                <Menu home={true} login={true} sobre={false} />
+                <Menu page='sobre'  />
                 <SobreProjeto />
                 <SobreEquipe />
-                <Rodape />
+                <Footer/>
             </div>
         );
     }

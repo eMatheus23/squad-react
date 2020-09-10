@@ -1,11 +1,13 @@
 import React from 'react';
 import './imagens.css';
 import './imagensMobile.css';
-import '../em-comum/menu-rodape.css';
+import '../em-comum/estilo.css';
 
+// Importação Componentes e Páginas
 import Menu from '../em-comum/Menu';
+import Busca from './Busca';
 import GrupoImgTweets from './Grupo-img-tweets';
-import Rodape from '../em-comum/Rodape';
+import Footer from '../em-comum/Footer';
 
 
 // Adequação Reacts
@@ -13,9 +15,10 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <Menu home={false} login={true} sobre={true} />
-                <GrupoImgTweets />
-                <Rodape />
+                <Menu page="home"/>
+                <Busca/>
+                <GrupoImgTweets/>
+                <Footer/>
             </div>
         );
     }

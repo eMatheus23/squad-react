@@ -1,54 +1,54 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, {Component} from 'react'
+import logo from '../../svg/logo.svg'
 
-//Imagens
-import logo from '../../svg/logo.svg';
-import homeIcon from '../../svg/icon-home.svg';
-import loginIcon from '../../svg/icon-user-alt.svg';
-import sobreIcon from '../../svg/icon-info-circle.svg';
+import sobre from '../../svg/icon-info-circle.svg'
+import login from '../../svg/icon-user-alt.svg'
+import home from '../../svg/icon-home.svg'
+import buscas from '../../svg/icon-power-off.svg'
 
-export default class Menu extends React.Component {
+class Menu extends Component {
     render() {
-        return (
-            <div className="container">
-                <div className="logo">
-                    <Link to="/" target="_parent">
-                        <img src={logo} alt="HashtagFinder" />
-                    </Link>
-                </div>
 
+        console.log(this.props.page)
 
+        let botoes = {}
 
-                <div className="menu">  
+        botoes['home'] = <div className="menu">
+            <a className="sobre" href={"./sobre.html"}>
+                <img src={sobre} alt="Sobre" />sobre
+            </a>
+            <a className="login" href={"./login.html"}>
+                <img src={login} alt="Login" />login
+            </a>
+        </div>
+        botoes['login'] = <div className="menu">
+            <a className="home" href={"./index.js"}>
+                <img src={home} alt="Sobre" />home
+            </a>
+        </div>
+        botoes['sobre'] = <div className="menu">
+            <a className="home" href={"./index.js"}>
+                <img src={home} alt="Sobre" />home
+            </a>      
+            <a className="login" href={"./login.html"}>
+                <img src={login} alt="Login" />login
+            </a>               
+        </div>
+        botoes['buscas'] = <div className="sair">
+            <a className="sair" href={"./buscas.html"}>
+                <img src={buscas} alt="Sair" />Sair
+            </a>
+        </div>
 
-
-                    {this.props.home ?
-
-                    <Link className="home" to="/">
-                        <img src={homeIcon} alt="Home" />
-                            home
-                    </Link> :
-                    
-                    null}
-
-
-
-                    {this.props.sobre ?
-                    <Link className="sobre" to="/Sobre">
-                        <img src={sobreIcon} alt="Sobre" />
-                            sobre
-                    </Link> : null}
-
-
-
-
-                    {this.props.login ?
-                    <Link className="login" to="/Login">
-                        <img src={loginIcon} alt="Login" />
-                            login
-                    </Link> : null}             
-                </div>      
-            </div>
-        );
+        return <div className="container">
+                    <div className="logo">
+                        <a href={"./menu.js"} target="_parent">
+                            <img src={logo} alt="HashtagFinder" />
+                        </a>
+                    </div>
+                    {botoes[this.props.page]}
+                </div>;
     }
 }
+
+export default Menu;
