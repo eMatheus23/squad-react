@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom';
 import logo from '../../svg/logo.svg'
 
 import sobre from '../../svg/icon-info-circle.svg'
@@ -15,30 +14,30 @@ class Menu extends Component {
         let botoes = {}
 
         botoes['home'] = <div className="menu">
-            <Link className="sobre" to="/Sobre">
+            <a className="sobre" href={"./sobre.html"}>
                 <img src={sobre} alt="Sobre" />sobre
-            </Link>
-            <Link className="login" to="/Login">
+            </a>
+            <a className="login" href={"./login.html"}>
                 <img src={login} alt="Login" />login
-            </Link>
+            </a>
         </div>
         botoes['login'] = <div className="menu">
-            <Link className="home" to="/">
-                <img src={home} alt="Home" />home
-            </Link>
+            <a className="home" href={"./index.js"}>
+                <img src={home} alt="Sobre" />home
+            </a>
         </div>
         botoes['sobre'] = <div className="menu">
-            <Link className="home" to="/">
-                <img src={home} alt="Home" />home
-            </Link>      
-            <Link className="login" to="/Login">
+            <a className="home" href={"./index.js"}>
+                <img src={home} alt="Sobre" />home
+            </a>      
+            <a className="login" href={"./login.html"}>
                 <img src={login} alt="Login" />login
-            </Link>               
+            </a>               
         </div>
         botoes['buscas'] = <div className="sair">
-            <Link className="sair" to="/Login">
+            <a className="sair" href={"./buscas.html"}>
                 <img src={buscas} alt="Sair" />Sair
-            </Link>
+            </a>
         </div>
 
         return <div className="container">
