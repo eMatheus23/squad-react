@@ -13,7 +13,7 @@ class Sobre extends React.Component {
     render() {
         return (
             <div>
-                <Menu page='sobre'  />
+                <Menu page='sobre' />
                 <SobreProjeto />
                 <SobreEquipe />
                 <Footer/>
