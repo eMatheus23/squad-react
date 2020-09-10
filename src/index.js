@@ -3,7 +3,6 @@ import React from 'react';
 
 
 //Importar páginas 
-import Menu from './pages/menu/Menu';
 import Home from './pages/home/home';
 import Sobre from './pages/sobre/sobre';
 import Login from './pages/login/login';
@@ -19,8 +18,7 @@ import {
 //Renderizar páginas
 ReactDOM.render(
     <React.StrictMode>			
-		<Router>
-			<Menu/>
+		<Router>			
 			<Switch>				
 				<Route path="/sobre" component={Sobre} />
 				<Route path="/login" component={Login} />
