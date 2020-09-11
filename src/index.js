@@ -7,25 +7,35 @@ import Home from './pages/home/home';
 import Sobre from './pages/sobre/sobre';
 import Login from './pages/login/login';
 
+
 // Importação Router
 import {
-	BrowserRouter as Router,
-	Switch,
-	Route
-  } from 'react-router-dom';
-  import ReactDOM from 'react-dom';
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from 'react-router-dom';
+import ReactDOM from 'react-dom';
 
 //Renderizar páginas
-ReactDOM.render(
-    <React.StrictMode>			
-		<Router>			
-			<Switch>				
-				<Route path="/sobre" component={Sobre} />
-				<Route path="/login" component={Login} />
-				<Route path="/" component={Home} />
-			</Switch>
-		</Router>
-    </React.StrictMode>,
+ReactDOM.render( <
+    React.StrictMode >
+    <
+    Router >
+    <
+    Switch >
+    <
+    Route path = "/sobre"
+    component = { Sobre }
+    /> <
+    Route path = "/login"
+    component = { Login }
+    /> <
+    Route path = "/"
+    component = { Home }
+    /> <
+    /Switch> <
+    /Router> <
+    /React.StrictMode>,
     document.getElementById('root')
 );
 
@@ -36,4 +46,3 @@ ReactDOM.render(
 // Retirar o menu 
 // Retirar o rodape
 // Rodapé no final da página
-

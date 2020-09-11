@@ -3,9 +3,13 @@ import React from 'react';
 //Componentes
 import GaleriaImagens from './Galeria-img';
 import GaleriaTweets from './Galeria-tweets';
+import ServerImagTweets from './Server-img-tweets';
+
 
 
 export default class GrupoImgTweets extends React.Component {
+   
+
     render() {
         return (
             <div className="containerGrupo">
@@ -18,9 +22,12 @@ export default class GrupoImgTweets extends React.Component {
             <div id="imagensMobile" className="botaoAbas" onClick="esconderTweets()">Imagens</div>
             <div className="linha"></div>
         </div>
+        <ServerImagTweets />
             <GaleriaImagens />
             <GaleriaTweets />
         </div>
         );
     }
 }
+
+
