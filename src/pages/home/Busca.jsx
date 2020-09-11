@@ -1,7 +1,7 @@
 import React from 'react'
 
 function limparHashtag() {
-
+    
 }
 
 function Busca() {
