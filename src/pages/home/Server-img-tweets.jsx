@@ -13,7 +13,7 @@ var requestOptions = {
   headers: myHeaders,
   redirect: 'follow'
 };
-fetch("https://cors-anywhere.herokuapp.com/https://api.twitter.com/1.1/search/tweets.json?q=natureza&count=10", requestOptions)
+fetch("https://cors-anywhere.herokuapp.com/https://api.twitter.com/1.1/search/tweets.json?q=natureza&count=10&result_type=recent", requestOptions)
   .then(response => response.json())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
