@@ -4,3 +4,45 @@
 [0904/162916.706:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0904/164443.209:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0904/164443.210:ERROR:crash_report_database_win.cc(469)] failed to stat report
+<<<<<<< Updated upstream
+=======
+[0911/124558.663:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/124558.665:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/124558.665:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/125558.664:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/125558.666:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/125558.666:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/125558.666:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/125558.666:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/125558.666:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/130058.666:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/130058.666:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/130058.666:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/131558.666:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/131558.666:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/131558.666:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/133058.667:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/133058.667:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/133058.667:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/134558.712:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/134558.712:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/134558.712:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/140058.713:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/140058.713:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/140058.713:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/141559.541:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/141559.541:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0911/141559.541:ERROR:crash_report_database_win.cc(469)] failed to stat report
+>>>>>>> Stashed changes
+[0912/120917.982:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0912/120917.983:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0912/120917.983:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0912/121917.983:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0912/121917.983:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0912/121917.984:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0912/121917.984:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0912/121917.984:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0912/121917.984:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0912/122417.984:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0912/122417.984:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0912/122417.984:ERROR:crash_report_database_win.cc(469)] failed to stat report

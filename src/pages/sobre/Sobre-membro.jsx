@@ -1,9 +1,9 @@
 import React from 'react';
 
 //Imagens
-import gitIcon from '../svg/icon-github.svg';
-import emailIcon from '../svg/icon-envelope.svg';
-import linkedinIcon from '../svg/icon-awesome-linkedin.svg';
+import gitIcon from '../../svg/icon-github.svg';
+import emailIcon from '../../svg/icon-envelope.svg';
+import linkedinIcon from '../../svg/icon-awesome-linkedin.svg';
 
 
 export default class SobreMembro extends React.Component {

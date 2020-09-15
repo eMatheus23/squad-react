@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Import ilustração
-import ilustração from '../svg/about-ilustration.svg';
+import ilustração from '../../svg/about-ilustration.svg';
 // Adequação Reacts
 export default class SobreProjeto extends React.Component {
     render() {
@@ -25,7 +25,7 @@ export default class SobreProjeto extends React.Component {
                     </p>
                 </main>                
                 <img className='sobre-projeto__imagem'
-                src={ilustração}>                                       
+                src={ilustração} alt="Ilustração" >                                       
                 </img>
             </div>
               
