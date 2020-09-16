@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap');
+
+#tabela {
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #0c1f498e;
+    border-radius: 25px;
+    
+}
+
+.cabeca {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #0c1f49;
+}
+.cabeca p {
+    color:#72EFDB;
+    font-family: "rubik";
+    font-weight: 700;
+}
+
+.cabeca, .linhaa {
+    width: 100%;
+   display: flex;
+    flex-direction: row;
+    font-size: 16px;
+}
+.linhaa {
+    margin: 10px;;
+}
+.linhaa p:nth-child(2),.cabeca p:nth-child(2) {
+    margin-left: 65%;
+  }
+  .cabeca p:nth-child(3){
+    margin-left: 7%;
+  } 
+.linhaa p:nth-child(3){
+    margin-left: 6%;
+}
+.linhaa p:nth-child(2),.linhaa p:nth-child(3) {
+    color: #72EFDB;
+    
+}
+.cabeca p, .linhaa p {
+    margin: 30px;
+    font-family: "rubik";
+    font-weight: 400;
+}
+#pgdois {
+    width: 100%;
+}
+p {
+    color: aliceblue;
+    opacity: 0.7;
+    display: inline-block
+}
+#pgdois {
+    display: none;
+}
+.fade {
+    height: 1px;
+    opacity: 0.3;
+    width: 100%;
+    background-image: linear-gradient(to right top, #366b9c5d, #366b9c5d, #366b9c5d,
+     #6feff3, #6feff3, #6feff3, #0c262e, #0c262e, #0c262e);
+}
+#rodape {
+    display: block;
+}
+#paginacao {
+    width: 100%;
+    margin-left: 0%;
+    height: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+a {
+    color: cyan;
+    text-decoration: none;
+    opacity: 0.5;
+    font-size: 16px;
+   
+}
+a:hover {
+    opacity: 1;
+}
+a:nth-child(2) {
+    margin-left: 20px;;
+}
+nav {
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+nav li {
+    list-style: none;
+    margin: 10px;
+}
+  @media(max-width: 1000px){
+
+      .linhaa p:nth-child(2),.cabeca p:nth-child(2) {
+        margin-left: 0px;
+      }
+    .linhaa p:nth-child(3),.cabeca p:nth-child(3){
+        margin-left: 0px;
+    }
+    .cabeca, .linhaa {
+        width: 100%;
+       display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #paginacao {
+        justify-content: center;
+    }
+  }

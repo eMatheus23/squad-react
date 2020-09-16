@@ -1,11 +1,12 @@
 // Importar componentes do react
 import React from 'react';
-
+  import ReactDOM from 'react-dom';
 
 //Importar páginas 
 import Home from './pages/home/home';
 import Sobre from './pages/sobre/sobre';
 import Login from './pages/login/login';
+import App from './pages/buscas/page'
 
 // Importação Router
 import {
@@ -13,19 +14,20 @@ import {
 	Switch,
 	Route
   } from 'react-router-dom';
-  import ReactDOM from 'react-dom';
+
 
 //Renderizar páginas
 ReactDOM.render(
-    <React.StrictMode>			
+    		
 		<Router>			
-			<Switch>				
+			<Switch>
+				<Route path="/buscas" component={App} />				
 				<Route path="/sobre" component={Sobre} />
 				<Route path="/login" component={Login} />
-				<Route path="/" component={Home} />
+				<Route path="/" exact= {true} component={Home} />
 			</Switch>
 		</Router>
-    </React.StrictMode>,
+    ,
     document.getElementById('root')
 );
 
