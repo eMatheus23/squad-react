@@ -42,6 +42,7 @@ export default class GrupoImgTweets extends React.Component {
     } else {
       this.setState({ isMobile: false });
     }
+    // fonte: https://stackoverflow.com/questions/19014250/rerender-view-on-browser-resize-with-react
   };
 
   componentDidMount() {
@@ -73,6 +74,7 @@ export default class GrupoImgTweets extends React.Component {
             id="tweetMobile"
             // Uma forma de deixar uma className fixa e outra dinâmica
             // A aba Tweet ganha a classe botaoAbasSelecionadoQuando apenas se o "isTweetsOn" for true
+            // fonte: https://stackoverflow.com/questions/34521797/how-to-add-multiple-classes-to-a-reactjs-component
             className={[
               "botaoAbas",
               this.state.isTweetsOn ? "botaoAbasSelecionado" : "",
