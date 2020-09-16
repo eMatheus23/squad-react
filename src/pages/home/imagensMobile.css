@@ -92,10 +92,11 @@
         padding: 5vw;
         font-size: 40%;
     }
-    /* Desativa o conteiner das imagens em um primeiro momento no mobile */
+    /* Desativa o conteiner das imagens em um primeiro momento no mobile 
     #imagens {
         display: none;
     }
+    */
 }
 
 @media (max-width: 550px) {
