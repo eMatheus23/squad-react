@@ -10,8 +10,8 @@ export default class GrupoImgTweets extends React.Component {
     this.state = {
       isTweetsOn: true,
       isMobile: false,
-      width: 0,
-      height: 0,
+      width: window.innerWidth,
+      height: window.innerHeight,
     };
 
     // this.esconderTweets = this.esconderTweets.bind(this);
@@ -99,11 +99,12 @@ export default class GrupoImgTweets extends React.Component {
         {/* O trecho abaixo foi modificado com condicionais para que seja possível alternar as abas no mobile */}
 
         {/* Quando não for mobile */}
-        {this.state.isMobile ? "" : <GaleriaTweets posts={this.props.posts} />}
         {this.state.isMobile ? "" : <GaleriaImagens />}
+        {this.state.isMobile ? "" : <GaleriaTweets posts={this.props.posts} />}
+        
 
         {/* Quando for mobile */}
-        {this.state.isTweetsOn && this.state.isMobile ? "" : <GaleriaImagens />}
+        {this.state.isTweetsOn === false && this.state.isMobile ? <GaleriaImagens /> : "" }
         {this.state.isTweetsOn && this.state.isMobile ? <GaleriaTweets posts={this.props.posts} /> : "" }
 
       </div>
