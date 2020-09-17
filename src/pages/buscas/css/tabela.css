@@ -103,6 +103,10 @@ nav li {
     list-style: none;
     margin: 10px;
 }
+.active a{
+   opacity: 1;
+   
+}
   @media(max-width: 1000px){
 
       .linhaa p:nth-child(2),.cabeca p:nth-child(2) {
