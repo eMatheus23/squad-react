@@ -144,6 +144,12 @@ h3 {
     float: left;
 }
 
+.containerGaleriaTweets a {
+    color: cyan;
+    text-decoration: none;
+    opacity: 0.5;  
+}
+
 .containerTweets {
     opacity: 0;
     max-height: 30px;

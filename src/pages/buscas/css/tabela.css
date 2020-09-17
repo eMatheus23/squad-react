@@ -80,7 +80,7 @@ p {
     flex-direction: row;
     justify-content: center;
 }
-a {
+ul a {
     color: cyan;
     text-decoration: none;
     opacity: 0.5;
