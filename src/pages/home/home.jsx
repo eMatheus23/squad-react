@@ -18,17 +18,7 @@ class Home extends React.Component {
         this.state = {posts: []}
     }
 
-    render() {
-
-        return (
-            <div>
-                <Menu page="home"/>
-                <Busca/>
-                <GrupoImgTweets posts={this.state.posts} />
-                <Footer/>
-            </div>
-        );
-    }
+    
 
     componentDidMount(){
 
@@ -76,6 +66,18 @@ class Home extends React.Component {
         })
         .catch(error => console.log('error', error));
     }
+    render() {
+
+        return (
+            <div>
+                <Menu page="home"/>
+                <Busca/>
+                <GrupoImgTweets posts={this.state.posts} />
+                <Footer/>
+            </div>
+        );
+    }
+
 }
 
 export default Home;
