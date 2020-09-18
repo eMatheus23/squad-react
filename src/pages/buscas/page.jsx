@@ -5,41 +5,32 @@ import Posts from './post'
 import Pagination from './pagination'
 import Cabecalho from './cabecalho'
 
-
-
 const App = () => {
-    const [posts, setPosts] = useState([]);
-    const [loading, setLoading] = useState([false]);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage, setPostsPerPage] = useState(10);
+    const [posts, setPosts] = useState([]); // Código que irá receber as respostas da requisição
+    const [loading, setLoading] = useState([false]); // código para fazer o loading durante a requisição
+    const [currentPage, setCurrentPage] = useState(1); // página atual (o 1 é o valor padrão)
+    const [postsPerPage, setPostsPerPage] = useState(10); // número de posts por páginas
    
-
-
-
     useEffect(() => {
+
+        //Aqui foi utilizada a codificação estabelecida pela api do airtable para requisição da tabela
         const apiCall =  () => {
         var Airtable = require('airtable');
         var base = new Airtable({apiKey: 'keySN0JAq3DIPdHUT'}).base('appEnlSQDPT6iYdgZ');
         const tabela =  base('Buscas');
-        //console.log('oi' , base)
         const getInformation =  async () => {
             setLoading(true);
             const informations = await tabela.select().firstPage()
-            /*Daqui pra baixo estou trabalhando com o resultdo da requisição*/
-            //console.log(informations)
-
+            /*Daqui pra baixo estou trabalhando com o resultado da requisição*/
             setPosts(informations);
             setLoading(false);
-           // console.log({posts})
-
         };
-
         getInformation();
         }; apiCall();
-    }, []); // fim do use effect
+    }, []); 
 
-    //Código para buscar página atual
-    //console.log(posts)
+    //Código com fórmulas para estabelecer a estrutura de páginas da tabela e visualização dos posts 
+
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);

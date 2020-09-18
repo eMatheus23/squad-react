@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap');
 
+/*CSS da tabela de posts*/
 #tabela {
     width: 80%;
     margin-left: 10%;
@@ -61,6 +62,8 @@ p {
 #pgdois {
     display: none;
 }
+/*Estilo das linhas entre as tabelas*/
+
 .fade {
     height: 1px;
     opacity: 0.3;
@@ -68,9 +71,8 @@ p {
     background-image: linear-gradient(to right top, #366b9c5d, #366b9c5d, #366b9c5d,
      #6feff3, #6feff3, #6feff3, #0c262e, #0c262e, #0c262e);
 }
-#rodape {
-    display: block;
-}
+/*Estilo da navegação de links entre as páginas da tabela*/
+
 #paginacao {
     width: 100%;
     margin-left: 0%;
@@ -107,6 +109,7 @@ nav li {
    opacity: 1;
    
 }
+/*Abaixo está o código com as alterações para a versão responsiva*/
   @media(max-width: 1000px){
 
       .linhaa p:nth-child(2),.cabeca p:nth-child(2) {
