@@ -19,66 +19,21 @@ import DecimaImagen from '../../imagens/top10/photo-10.jpg';
 
 export default class GaleriaImagens extends React.Component {
     render() {
+     
+        console.log(this.props.posts)
         return (
             //Container que segura todas as divs de imagens relacionadas na pesquisadas 
             <div id="imagens" className="containerGaleria">
-                <div className="coluna">
-                    <ImagensPostadas
-                    foto={PrmeiraImagen}
-                    textoPostadoPor="Postado por:"
-                    textoTwitterUse="@twitterusername"
-               />
-                    <ImagensPostadas
-                    foto={SegundaImagen}
-                    textoPostadoPor="Postado por:"
-                    textoTwitterUse="@twitterusername"
-               />
-                    <ImagensPostadas
-                    foto={TerceiraImagen}
-                    textoPostadoPor="Postado por:"
-                    textoTwitterUse="@twitterusername"
-               />
-                    <ImagensPostadas
-                    foto={QuartaImagen}
-                    textoPostadoPor="Postado por:"
-                    textoTwitterUse="@twitterusername"
-               />
-                    <ImagensPostadas
-                    foto={QuintaImagen}
-                    textoPostadoPor="Postado por:"
-                    textoTwitterUse="@twitterusername"
-               />
-               </div>
-            <div className="coluna" id="coluna2">
-                     <ImagensPostadas
-                    foto={SextaImagen}
-                    textoPostadoPor="Postado por:"
-                    textoTwitterUse="@twitterusername"
-               />
-                    <ImagensPostadas
-                    foto={SetimaImagen}
-                    textoPostadoPor="Postado por:"
-                    textoTwitterUse="@twitterusername"
-               />
-                    <ImagensPostadas
-                    foto={OitavaImagen}
-                    textoPostadoPor="Postado por:"
-                    textoTwitterUse="@twitterusername"
-               />
-                     <ImagensPostadas
-                    foto={NonaImagen}
-                    textoPostadoPor="Postado por:"
-                    textoTwitterUse="@twitterusername"
-               />
-                     <ImagensPostadas
-                    foto={DecimaImagen}
-                    textoPostadoPor="Postado por:"
-                    textoTwitterUse="@twitterusername"
-               />
-               </div>
+               { 
+                    this.props.posts.map((tweet, index) => <div key={"imgtwitter-"+index} className="coluna">
+                              <ImagensPostadas
+                              foto={tweet.entities.media[0].media_url}
+                              textoPostadoPor="Postado por:"
+                              textoTwitterUse={"@"+tweet.user.screen_name}
+                              />
+                    </div>)
+               }
           </div>
-
-
         );
     }
 }

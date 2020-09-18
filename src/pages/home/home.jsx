@@ -25,7 +25,6 @@ class Home extends React.Component {
         // Elementos que devem aparecer conforme o usuário desce a página
         let tweetElements = document.querySelectorAll('.containerTweets');
 
-        
         // Função que será rodada sempre que o usuário mexer no scroll da página
         function tweetAnimScroll() {
             
@@ -54,7 +53,7 @@ class Home extends React.Component {
         headers: myHeaders,
         redirect: 'follow'
         };
-        fetch("https://cors-anywhere.herokuapp.com/https://api.twitter.com/1.1/search/tweets.json?q=natureza&count=10&result_type=recent", requestOptions)
+        fetch("https://cors-anywhere.herokuapp.com/https://api.twitter.com/1.1/search/tweets.json?q=natureza&count=50&result_type=recent", requestOptions)
         .then(response => response.json())
         .then(result => {
             console.log(result.statuses);

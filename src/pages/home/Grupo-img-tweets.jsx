@@ -99,12 +99,16 @@ export default class GrupoImgTweets extends React.Component {
         {/* O trecho abaixo foi modificado com condicionais para que seja possível alternar as abas no mobile */}
 
         {/* Quando não for mobile */}
-        {this.state.isMobile ? "" : <GaleriaImagens />}
+        {this.state.isMobile ? "" : <GaleriaImagens posts={this.props.posts.filter((tweet) => {
+          return (tweet.entities && tweet.entities.media && tweet.entities.media.length > 0)
+        })} />}
         {this.state.isMobile ? "" : <GaleriaTweets posts={this.props.posts} />}
         
 
         {/* Quando for mobile */}
-        {this.state.isTweetsOn === false && this.state.isMobile ? <GaleriaImagens /> : "" }
+        {this.state.isTweetsOn === false && this.state.isMobile ? <GaleriaImagens posts={this.props.posts.filter((tweet) => {
+          return (tweet.entities && tweet.entities.media && tweet.entities.media.length > 0)
+        })} /> : "" }
         {this.state.isTweetsOn && this.state.isMobile ? <GaleriaTweets posts={this.props.posts} /> : "" }
 
       </div>
