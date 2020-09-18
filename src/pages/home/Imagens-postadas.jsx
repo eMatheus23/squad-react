@@ -11,7 +11,7 @@ export default class ImagensPostadas extends React.Component {
                 <img 
                  src={this.props.foto}
                  alt="foto Postada"
-                 onclick="cliqueModal(this)"/>
+                 onClick={this.props.loadModalFunc}/>
                 <div className="degrade"></div>
                 <div className="containerTexto">
                     <div className="texto">
