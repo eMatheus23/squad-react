@@ -112,7 +112,13 @@ body, h1, p {font-family: 'Rubik', Regular;}
     z-index:30;
     border-style: none; 
     color: white;
+    font-size: 22px;
 }
+
+.input:focus {
+    outline: none;
+}
+
 .hero-busca {
     padding-top: 90px;
     display: flex;
