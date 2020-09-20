@@ -20,7 +20,7 @@ export default class TweetsPostados extends React.Component {
               rel="noopener noreferrer"
               className="linkTwitter"
             >
-              {this.props.verMais}
+              Ver mais no twitter
             </a>
           </div>
         </div>

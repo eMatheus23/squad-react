@@ -13,8 +13,7 @@ export default class GaleriaTweets extends React.Component {
               userName={tweet.user.name}
               twitterUserName={"@" + tweet.user.screen_name}
               textoTweet={tweet.text}
-              link={`https://twitter.com/${this.props.posts[0].user.screen_name}/status/${this.props.posts[0].id_str}`}
-              verMais="Ver mais no twitter"
+              link={`https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`}
             />
           ))}
         </div>
