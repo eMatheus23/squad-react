@@ -38,7 +38,41 @@ class Home extends React.Component {
     // Chamar a função ao carregar a página, e depois sempre que o usuário mexer no scroll
     tweetAnimScroll();
     document.querySelector("body").onscroll = tweetAnimScroll;
+  }
 
+  /*
+  componentDidUpdate(prevProps) {
+    if (prevProps.termo !== this.props.term) {
+      console.log(this.props.termo);
+    }
+  }
+  */
+
+  handleKeyDown = (event) => {
+    if (event.key === "Enter" && event.target.value !== "") {
+      event.preventDefault();
+
+      const termoDigitado = event.target.value
+
+      /*
+      this.setState((state) => ({
+        termo: termoDigitado,
+      }));
+      */
+
+      // this.props.handleKeyDown(termoDigitado);
+
+      console.log(this.state.termo);
+
+      event.target.value = "";
+
+      this.setState({ termo: termoDigitado })
+      
+      this.fazerBusca(termoDigitado);
+    }
+  };
+
+  fazerBusca = (termo) => {
     var myHeaders = new Headers();
     myHeaders.append(
       "authorization",
@@ -54,7 +88,7 @@ class Home extends React.Component {
       redirect: "follow",
     };
     fetch(
-      `https://cors-anywhere.herokuapp.com/https://api.twitter.com/1.1/search/tweets.json?q=${this.state.termo}&count=50&result_type=recent`,
+      `https://cors-anywhere.herokuapp.com/https://api.twitter.com/1.1/search/tweets.json?q=${termo}&count=50&result_type=recent`,
       requestOptions
     )
       .then((response) => response.json())
@@ -68,39 +102,6 @@ class Home extends React.Component {
       })
       .catch((error) => console.log("error", error));
   }
-
-  /*
-  componentDidUpdate(prevProps) {
-    if (prevProps.termo !== this.props.term) {
-      console.log(this.props.termo);
-    }
-  }
-  */
-
-  handleKeyDown = (event) => {
-    if (event.key === "Enter" && event.target.value !== "") {
-      event.preventDefault();
-
-      const termoDigitado = this.refs.input.value;
-
-      /*
-      this.setState((state) => ({
-        termo: termoDigitado,
-      }));
-      */
-
-      // this.props.handleKeyDown(termoDigitado);
-
-      console.log(this.state.termo);
-
-      event.target.value = "";
-
-      this.forceUpdate()
-
-      return (this.setState({ termo: termoDigitado }))
-    }
-  };
-
 
   render() {
     return (
