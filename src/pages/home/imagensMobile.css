@@ -64,7 +64,6 @@
         cursor: pointer;
     }
     .containerGrupo {
-        margin-top: 15px;
         flex-direction: column;
         align-items: center;
     }

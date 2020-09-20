@@ -46,14 +46,12 @@ export default class GaleriaImagens extends React.Component {
       <>
         <div id="imagens" className="containerGaleria">
           {this.props.posts.slice(0, 10).map((tweet, index) => (
-            <div key={"imgtwitter-" + index} className="coluna">
-              <ImagensPostadas
-                loadModalFunc={this.loadModal}
-                foto={tweet.entities.media[0].media_url}
-                textoPostadoPor="Postado por:"
-                textoTwitterUse={"@" + tweet.user.screen_name}
-              />
-            </div>
+            <ImagensPostadas
+              loadModalFunc={this.loadModal}
+              foto={tweet.entities.media[0].media_url}
+              textoPostadoPor="Postado por:"
+              textoTwitterUse={"@" + tweet.user.screen_name}
+            />
           ))}
         </div>
         <ModalImg
