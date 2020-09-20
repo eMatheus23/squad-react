@@ -63,10 +63,10 @@ export default class GrupoImgTweets extends React.Component {
       <div className="containerGrupo">
         <h3>
           <div className="desktop">
-            Exibindo os 10 resultados mais recentes para #natureza{" "}
+            Exibindo os 10 resultados mais recentes para #{this.props.termo}
           </div>
           <div className="semResultado">
-            Não encontramos resultados para #palavra{" "}
+            Não encontramos resultados para #{this.props.termo}
           </div>
         </h3>
         <div className="mobile">

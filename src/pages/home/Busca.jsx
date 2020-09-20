@@ -4,34 +4,10 @@ import Home from "./Home";
 class Busca extends React.Component {
   constructor(props) {
     super(props);
-
-    this.handleSubmitButton = this.handleKeyDown.bind(this);
   }
 
   limparHashtag() {}
 
-  handleKeyDown = (event) => {
-    if (event.key === "Enter" && event.target.value !== "") {
-      event.preventDefault();
-
-      const termoDigitado = this.refs.input.value;
-
-      /*
-      const termoDigitado = event.target.value;
-      this.setState((state) => ({
-        termo: termoDigitado,
-      }));
-      */
-
-      // this.props.handleKeyDown(termoDigitado);
-
-      console.log(termoDigitado);
-
-      event.target.value = "";
-
-      return <home termo={termoDigitado} />;
-    }
-  };
 
   render() {
     return (
@@ -55,7 +31,7 @@ class Busca extends React.Component {
             onFocus={this.limparHashtag}
             className="input"
             placeholder="Buscar..."
-            onKeyDown={this.handleKeyDown}
+            onKeyDown={this.props.loadInputFunc}
           />
           <div className="message"></div>
         </div>
