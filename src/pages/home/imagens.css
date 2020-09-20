@@ -162,8 +162,8 @@ h3 {
 }
 
 .containerTweets {
-    opacity: 0;
-    max-height: 30px;
+    /* opacity: 0;
+    max-height: 30px; */
     overflow: hidden;
     pointer-events: none;
     transition: opacity .5s ease;
