@@ -45,7 +45,7 @@ body, h1, p {font-family: 'Rubik', Regular;}
     width: 12px;
     margin: 6px;
 }
-.sobre, .home {
+.sobre, .home, .sair {
     background-color: rgba(114, 239, 219, 1);
     color: #0B1741;    
 }
@@ -97,7 +97,7 @@ body, h1, p {font-family: 'Rubik', Regular;}
     padding-top: 20px;    
 }
 /*--------BUSCA--------*/
-.input {
+.hero-busca .input {
     background-image: url("../../svg/icon-search.svg");
     background-repeat: no-repeat;
     background-color: rgba(30, 62, 123, 1);
