@@ -108,7 +108,7 @@ class Home extends React.Component {
       <div>
         <Menu page="home" />
         <Busca loadInputFunc={this.handleKeyDown}/>
-        <GrupoImgTweets posts={this.state.posts} termo={this.state.termo} />
+        {this.state.termo !== '' ? <GrupoImgTweets posts={this.state.posts} termo={this.state.termo} /> : ''}
         <Footer />
       </div>
     );
