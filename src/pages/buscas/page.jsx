@@ -9,7 +9,7 @@ const App = () => {
     const [posts, setPosts] = useState([]); // Código que irá receber as respostas da requisição
     const [loading, setLoading] = useState([false]); // código para fazer o loading durante a requisição
     const [currentPage, setCurrentPage] = useState(1); // página atual (o 1 é o valor padrão)
-    const [postsPerPage, setPostsPerPage] = useState(10); // número de posts por páginas
+    const [postsPerPage/*, setPostsPerPage*/] = useState(10); // número de posts por páginas
    
     useEffect(() => {
 
