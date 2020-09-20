@@ -10,8 +10,6 @@ import buscas from '../../svg/icon-power-off.svg'
 class Menu extends Component {
     render() {
 
-        console.log(this.props.page)
-
         let botoes = {}
 
         botoes['home'] = <div className="menu">
