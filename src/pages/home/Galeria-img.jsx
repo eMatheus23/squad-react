@@ -29,6 +29,8 @@ export default class GaleriaImagens extends React.Component {
   }
 
   render() {
+    const { selectedImg, showModal } = this.state
+
     return (
       //Container que segura todas as divs de imagens relacionadas na pesquisadas
       <>
@@ -43,8 +45,8 @@ export default class GaleriaImagens extends React.Component {
           ))}
         </div>
         <ModalImg
-          selectedImg={this.state.selectedImg}
-          showmodal={this.state.showModal}
+          selectedImg={selectedImg}
+          showmodal={showModal}
           closeModalFunc={this.closeModal}
         />
       </>

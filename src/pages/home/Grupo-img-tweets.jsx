@@ -57,11 +57,15 @@ export default class GrupoImgTweets extends React.Component {
   }
 
   render() {
+    // Desestruturação para reduzir os comandos
+    const { termo, posts } = this.props;
+    const { isMobile, isTweetsOn } = this.state;
+
     return (
       <div className="containerGrupo" ref={this.myRef}>
         <h3>
           <div className="desktop">
-            Exibindo os 10 resultados mais recentes para #{this.props.termo}
+            Exibindo os 10 resultados mais recentes para #{termo}
           </div>
         </h3>
         <div className="mobile">
@@ -69,10 +73,9 @@ export default class GrupoImgTweets extends React.Component {
             id="tweetMobile"
             // Uma forma de deixar uma className fixa e outra dinâmica
             // A aba Tweet ganha a classe botaoAbasSelecionadoQuando apenas se o "isTweetsOn" for true
-            // fonte: https://stackoverflow.com/questions/34521797/how-to-add-multiple-classes-to-a-reactjs-component
             className={[
               "botaoAbas",
-              this.state.isTweetsOn ? "botaoAbasSelecionado" : "",
+              isTweetsOn ? "botaoAbasSelecionado" : "",
             ].join(" ")} // Usa [] para criar um array de classes e depois usa o join para juntá-las
             onClick={this.esconderImagens}
           >
@@ -83,7 +86,7 @@ export default class GrupoImgTweets extends React.Component {
             // A aba Imagens ganha a classe botaoAbasSelecionadoQuando apenas se o "isTweetsOn" for false
             className={[
               "botaoAbas",
-              this.state.isTweetsOn ? "" : "botaoAbasSelecionado",
+              isTweetsOn ? "" : "botaoAbasSelecionado",
             ].join(" ")}
             onClick={this.esconderTweets}
           >
@@ -94,18 +97,28 @@ export default class GrupoImgTweets extends React.Component {
         {/* O trecho abaixo foi modificado com condicionais para que seja possível alternar as abas no mobile */}
 
         {/* Quando não for mobile */}
-        {this.state.isMobile ? "" : <GaleriaImagens posts={this.props.posts.filter((tweet) => {
-          return (tweet.entities.media && tweet.entities.media.length > 0)
-        })} />}
-        {this.state.isMobile ? "" : <GaleriaTweets posts={this.props.posts} />}
-        
+        {isMobile ? (
+          ""
+        ) : (
+          <GaleriaImagens
+            posts={posts.filter((tweet) => {
+              return tweet.entities.media && tweet.entities.media.length > 0;
+            })}
+          />
+        )}
+        {isMobile ? "" : <GaleriaTweets posts={posts} />}
 
         {/* Quando for mobile */}
-        {this.state.isTweetsOn === false && this.state.isMobile ? <GaleriaImagens posts={this.props.posts.filter((tweet) => {
-          return (tweet.entities.media && tweet.entities.media.length > 0)
-        })} /> : "" }
-        {this.state.isTweetsOn && this.state.isMobile ? <GaleriaTweets posts={this.props.posts} /> : "" }
-
+        {isTweetsOn === false && isMobile ? (
+          <GaleriaImagens
+            posts={posts.filter((tweet) => {
+              return tweet.entities.media && tweet.entities.media.length > 0;
+            })}
+          />
+        ) : (
+          ""
+        )}
+        {isTweetsOn && isMobile ? <GaleriaTweets posts={posts} /> : ""}
       </div>
     );
   }

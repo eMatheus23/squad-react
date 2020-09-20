@@ -42,29 +42,11 @@ class Home extends React.Component {
     document.querySelector("body").onscroll = tweetAnimScroll;
   }
 
-  /*
-  componentDidUpdate(prevProps) {
-    if (prevProps.termo !== this.props.term) {
-      console.log(this.props.termo);
-    }
-  }
-  */
-
   handleKeyDown = (event) => {
     if (event.key === "Enter" && event.target.value !== "") {
       event.preventDefault();
 
       const termoDigitado = event.target.value;
-
-      /*
-      this.setState((state) => ({
-        termo: termoDigitado,
-      }));
-      */
-
-      // this.props.handleKeyDown(termoDigitado);
-
-      console.log(this.state.termo);
 
       event.target.value = "";
 
@@ -107,20 +89,26 @@ class Home extends React.Component {
   };
 
   render() {
+    // Desestruturação
+    const { posts, termo, encontrado } = this.state
+
     return (
       <div>
         <Menu page="home" />
+
         <Busca loadInputFunc={this.handleKeyDown} />
-        {this.state.encontrado && this.state.termo !== '' ? (
-          <GrupoImgTweets posts={this.state.posts} termo={this.state.termo} />
+
+        {encontrado && termo !== '' ? (
+          <GrupoImgTweets posts={posts} termo={termo} />
         ) : (
           ""
         )}
-        {this.state.encontrado === false && this.state.termo !== "" ? (
-          <NadaEncontrado termo={this.state.termo} />
+        {encontrado === false && termo !== "" ? (
+          <NadaEncontrado termo={termo} />
         ) : (
           ""
         )}
+
         <Footer />
       </div>
     );
