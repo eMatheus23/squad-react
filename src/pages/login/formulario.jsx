@@ -1,18 +1,21 @@
-import ReactDOM from "react-dom";
 import React from "react";
-import BgIMG from '../componentes/hero-bg.jpg';
-import IconHome from '../componentes/icon-home.svg';
-import BotaoH from '../componentes/botaoHome'
+import BgIMG from "./hero-bg.jpg";
+import IconHome from "./icon-home.svg";
+import BotaoHome from "./Botao-home";
+
+import "./login.css"
+import { Redirect } from "react-router-dom";
+
 //Iniciando as credenciais vazias
 var credenciais = {
-    usuario: '',
-    senha: ""
-}
+  usuario: "",
+  senha: "",
+};
 //Pegando os name dos Inputs
 function handleValue(e) {
-    credenciais[e.target.name] = e.target.value;
+  credenciais[e.target.name] = e.target.value;
 }
-//Funçao que verifica se os dados existem na API
+
 function loginUser(e) {
     e.preventDefault()
     var requestOptions = {
@@ -27,14 +30,23 @@ function loginUser(e) {
         console.log(result);
         //Verifica se as credencias de fato existem
         if (result.records.length) {
+            
             console.log('usuario logado')
+            window.location.assign("/buscas")
+            // redirecionar();
         } else {
-            console.log('credenciais invalidas')
+            alert('credenciais invalidas')
         }
     })
     .catch(error => console.log('error', error));
     
 }
+/*
+function redirecionar() {
+    return <Redirect to='/buscas'/>
+}
+*/
+
 function Login(){
     return <div className = "content" style ={{
         backgroundPosition: `center`,
@@ -43,7 +55,7 @@ function Login(){
         width: `100vw`,
         height: `100vh`,
         position: `absolute`}}>
-        <BotaoH/>
+        <BotaoHome/>
         <form className ="formulario" 
             style ={{display: "flex",
             flexDirection: "column",
@@ -70,5 +82,3 @@ function Icon(){
 }
 
 export {Login, BackIMG, Icon}
-
-

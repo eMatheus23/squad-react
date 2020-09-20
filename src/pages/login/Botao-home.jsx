@@ -6,7 +6,7 @@ class BotaoHome extends React.Component{
        console.log(this.props.page)
        let botao={}
        return(botao ['home'] = <div>
-            <a  className = "homeLink" href={"./home.html"}>
+            <a  className = "homeLink" href={"/"}>
        <h1 className ="home">HOME</h1>
         </a>
        </div> )

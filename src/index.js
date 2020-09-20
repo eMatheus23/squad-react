@@ -1,11 +1,11 @@
 // Importar componentes do react
 import React from 'react';
-  import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 
 //Importar páginas 
 import Home from './pages/home/Home';
 import Sobre from './pages/sobre/sobre';
-import Login from './pages/login/login';
+import { Login }  from './pages/login/formulario';
 import App from './pages/buscas/page'
 
 // Importação Router
