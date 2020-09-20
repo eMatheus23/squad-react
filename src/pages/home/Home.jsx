@@ -8,16 +8,18 @@ import Menu from "../em-comum/Menu";
 import Busca from "./Busca";
 import GrupoImgTweets from "./Grupo-img-tweets";
 import Footer from "../em-comum/Footer";
+import NadaEncontrado from "./Nada-encontrado";
 
 // Adequação Reacts
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { posts: [], termo: "" };
+    this.state = { posts: [], termo: "", encontrado: true };
+    this.myRef = React.createRef();
   }
 
   componentDidMount() {
-      // Elementos que devem aparecer conforme o usuário desce a página
+    // Elementos que devem aparecer conforme o usuário desce a página
     let tweetElements = document.querySelectorAll(".containerTweets");
 
     // Função que será rodada sempre que o usuário mexer no scroll da página
@@ -52,7 +54,7 @@ class Home extends React.Component {
     if (event.key === "Enter" && event.target.value !== "") {
       event.preventDefault();
 
-      const termoDigitado = event.target.value
+      const termoDigitado = event.target.value;
 
       /*
       this.setState((state) => ({
@@ -66,8 +68,8 @@ class Home extends React.Component {
 
       event.target.value = "";
 
-      this.setState({ termo: termoDigitado })
-      
+      this.setState({ termo: termoDigitado });
+
       this.fazerBusca(termoDigitado);
     }
   };
@@ -95,20 +97,30 @@ class Home extends React.Component {
       .then((result) => {
         console.log(result.statuses);
         if (result.statuses.length <= 0) {
-          alert("Nenhum resultado foi encontrado!");
+          this.setState({ encontrado: false });
+          console.log(this.state.encontrado);
         } else {
-          this.setState({ posts: result.statuses });
+          this.setState({ posts: result.statuses, encontrado: true });
         }
       })
       .catch((error) => console.log("error", error));
-  }
+  };
 
   render() {
     return (
       <div>
         <Menu page="home" />
-        <Busca loadInputFunc={this.handleKeyDown}/>
-        {this.state.termo !== '' ? <GrupoImgTweets posts={this.state.posts} termo={this.state.termo} /> : ''}
+        <Busca loadInputFunc={this.handleKeyDown} />
+        {this.state.encontrado && this.state.termo !== '' ? (
+          <GrupoImgTweets posts={this.state.posts} termo={this.state.termo} />
+        ) : (
+          ""
+        )}
+        {this.state.encontrado === false && this.state.termo !== "" ? (
+          <NadaEncontrado termo={this.state.termo} />
+        ) : (
+          ""
+        )}
         <Footer />
       </div>
     );

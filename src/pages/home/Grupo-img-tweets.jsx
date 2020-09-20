@@ -13,8 +13,6 @@ export default class GrupoImgTweets extends React.Component {
       width: window.innerWidth,
       height: window.innerHeight,
     };
-
-    // this.esconderTweets = this.esconderTweets.bind(this);
   }
 
   // Método que esconde os tweets no mobile
@@ -60,13 +58,10 @@ export default class GrupoImgTweets extends React.Component {
 
   render() {
     return (
-      <div className="containerGrupo">
+      <div className="containerGrupo" ref={this.myRef}>
         <h3>
           <div className="desktop">
             Exibindo os 10 resultados mais recentes para #{this.props.termo}
-          </div>
-          <div className="semResultado">
-            Não encontramos resultados para #{this.props.termo}
           </div>
         </h3>
         <div className="mobile">
