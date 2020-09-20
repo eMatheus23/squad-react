@@ -4,6 +4,7 @@ import "./css/cabecalho.css"
 import Posts from './post'
 import Pagination from './pagination'
 import Cabecalho from './cabecalho'
+import Menu from "../em-comum/Menu";
 
 const App = () => {
     const [posts, setPosts] = useState([]); // Código que irá receber as respostas da requisição
@@ -45,7 +46,8 @@ const App = () => {
     return(
         <div className="corpo">
           
-           <Cabecalho/> 
+           <Menu page="buscas"/> 
+           <Cabecalho/>
            <Posts posts={currentPosts} loading ={loading}/>
            <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} currentPage={currentPage}/>
         </div>
