@@ -1,10 +1,9 @@
 import React from "react";
 import BgIMG from "./hero-bg.jpg";
 import IconHome from "./icon-home.svg";
-import BotaoHome from "./Botao-home";
+import Menu from "../em-comum/Menu";
 
 import "./login.css"
-import { Redirect } from "react-router-dom";
 
 //Iniciando as credenciais vazias
 var credenciais = {
@@ -55,7 +54,7 @@ function Login(){
         width: `100vw`,
         height: `100vh`,
         position: `absolute`}}>
-        <BotaoHome/>
+        <Menu page="login" />
         <form className ="formulario" 
             style ={{display: "flex",
             flexDirection: "column",
@@ -69,13 +68,11 @@ function Login(){
     </div>
 }
 
-console.log(BgIMG);
 
 function BackIMG(){
     return <img src = {BgIMG} alt = 'BackGround' className ='imgBG'/>
 }
 
-console.log(IconHome);
 
 function Icon(){
     return <img src = {IconHome} alt = 'HomeIcon' className ='icon'/>
