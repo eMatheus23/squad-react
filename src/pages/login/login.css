@@ -48,12 +48,16 @@ input.inputs{
     flex-shrink: 0;
     width: 80%;
     margin: 10px;
-}
-::-webkit-input-placeholder{
     color: white;
-    font-size: 10px;
+    font-size: 20px;
+
+}
+input.inputs::-webkit-input-placeholder{
+    color: white;
+    font-size: 20px;
     letter-spacing: 2px;
 }
+
 input.botao-acessar{
     background: #72EFDB 0% 0%  padding-box;
     border-radius: 34px;
@@ -79,25 +83,7 @@ input.botao-acessar{
     float: right;
     right: 100px;   
 }
-.home{
-    background-color: rgba(114, 239, 219, 1);
-    text-align: center;
-    align-content: center;
-    border-radius: 20px;
-    position: absolute;
-    width: 80px;
-    padding: 7px;
-    top: 20px;
-    font-size: 9px;
-    font-weight: bold;
-    right: 34px;
-    color: #0B1741;
-    text-decoration: none;
-}
-.homeLink{
-    text-decoration: none;
-    border: none;
-}
+
 @media (max-width: 768px){
 
     .titulo-login{
