@@ -77,7 +77,6 @@ class Home extends React.Component {
     )
       .then((response) => response.json())
       .then((result) => {
-        console.log(result.statuses);
         if (result.statuses.length <= 0) {
           this.setState({ encontrado: false });
           console.log(this.state.encontrado);
